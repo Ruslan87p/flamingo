@@ -1,0 +1,17 @@
+.bordered {
+    width: 2px;
+    height: 80px;
+    left: 30px;
+    top: 0;
+    position: relative;
+    background: darkblue;
+}
+h1 {
+    font-size: 4rem;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 700;
+}
+p {
+    color: #2E8DFB;
+    font-size: 1.5rem;
+}

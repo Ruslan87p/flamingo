@@ -1,0 +1,21 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <br>
+            <div>
+                <h1 class="title">Our Specialization</h1>
+            </div>
+            <br>
+            <div class="d-flex flex-row justify-content-around">
+                <div class="wrapper d-flex flex-column justify-content-between align-items-center" *ngFor="let s of listspec; let i = index;">
+                    <img class="service-img" src="{{s.img}}" alt="img">
+                    <br>
+                    <p>{{s.description}}</p>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>

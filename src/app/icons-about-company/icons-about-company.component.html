@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex flex-row justify-content-around" style="margin-top: 200px;">
+
+                <div class="icons-wrapper" *ngFor="let s of icons; let i = index;">
+                    <img class="service-img" src="{{s.img}}" alt="img">
+                    <span class="title">{{s.name}}</span>
+                    <p class="text">{{s.description}}</p>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>

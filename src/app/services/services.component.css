@@ -1,0 +1,81 @@
+.service-wrapper {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.service-img {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 50%;
+    background: wheat;
+}
+h1 {
+    color: #C90000;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+}
+.title {
+    font-size: 20px;
+    color: #0C3C60;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+.services {
+    height: calc(100% + 20vh);
+}
+.show-more {
+    color: #2E8DFB;
+    width: 100%;
+    text-align: center;
+}
+p {
+    font-weight: 400;
+    color: #2E8DFB;
+}
+
+
+
+/* CARD */
+.scene {
+    width: 200px;
+    height: 260px;
+    perspective: 600px;
+    background: white;
+  }
+  .card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #2E8DFB;
+    text-align: center;
+    font-weight: bold;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .card-face-front {
+    background: white;
+  }
+  .card-face-back {
+    background: white;
+    min-height: 318px;
+    transform: rotateY(180deg);
+  }
+/* END CARD */

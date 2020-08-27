@@ -1,0 +1,111 @@
+<div class="container">
+    <div style="margin-top: 50px;">
+        <h1>Demand for new apartments</h1>
+        <br>
+    
+        <div class="w-100 text-center">
+            <span class="link" data-toggle="modal" data-target="#modalWin">
+                Data from the Israelibr  <br>
+                Central Bureau of Statistics >>
+            </span>
+        </div>
+    
+
+        <div class="chart-wrapper" id="chart-wrapper">
+            <canvas baseChart 
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [plugins]="barChartPlugins"
+                [legend]="barChartLegend"
+                [chartType]="barChartType">
+          </canvas>
+        </div>
+
+          
+    </div>
+</div>
+
+
+
+
+
+<div class="container-fluid m-0 p-0">
+    <div class="row m-0 p-0">
+        <div class="col-md-12 m-0 p-0">
+            <div class="container-bg"></div>
+
+            <div class="content">
+
+                <div class="container">
+
+                    <div class="wrapper">
+
+                        <div class="w-50">
+                            <img style="max-width: 650px;" src="https://captiva-test.plotkinruslan.com/assets/imgs/map.png" alt="">
+                        </div>
+
+                        <div class="w-50 d-flex flex-column align-items-end">
+                            <span class="title">
+                                Starting construction for <br> residential properties 2018
+                            </span>
+                            <span class="link text-right">
+                                Data from the Israeli Central <br> Bureau of Statistics >>
+                            </span>
+                            <br>
+                            <img style="width: 139px;" src="https://captiva-test.plotkinruslan.com/assets/imgs/flags.png" alt="Img">
+                        </div>
+
+                    </div>
+                    
+                </div>
+ 
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal fade" id="modalWin" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header border-0">
+          <button type="button" style="left: 0; position: absolute;" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+            <div class="wrapper-pup-text">
+
+                <h2>Data from the Israeli Central Bureau of Statistics</h2>
+                <br>
+                <p class="pup-text">
+                    <a href="../../assets/pdf/1.pdf"> > Changes in the apartments market April - May 2020</a>
+                </p>
+                <p class="pup-text">
+                    <a href="../../assets/pdf/2.pdf"> > Demand for new apartments by district Mars - May 2020 </a>
+                </p>
+                <p class="pup-text"> 
+                  <a href="../../assets/pdf/3.pdf"> > Demand for new apartments Mars - May 2020 </a> 
+                </p>
+
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>

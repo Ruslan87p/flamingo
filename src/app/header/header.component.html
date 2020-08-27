@@ -1,0 +1,116 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <a class="navbar-brand" href="#">
+                    <div class="logo-wrapper">
+                        <img class="logo" src="https://captiva-test.plotkinruslan.com/assets/imgs/logo.svg" alt="logo">
+                        <img class="logo-flag" src="https://captiva-test.plotkinruslan.com/assets/imgs/us-flag.svg" alt="logo">
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAlt" aria-controls="navbarNavAlt" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAlt" style="margin-top: 20px;">
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link-item mr-3 ml-3" (click)="isOnClick('home')">Home</a> 
+                                                <span class="brdr"></span>
+
+                    <a class="nav-item nav-link-item mr-3 ml-3" (click)="isOnClick('services')">Our services</a>
+                                                <span class="brdr"></span>
+
+                    <a class="nav-item nav-link-item mr-3 ml-3" (click)="isOnClick('mission')">Our mission</a>
+                                                <span class="brdr"></span>
+
+                    <a class="nav-item nav-link-item mr-3 ml-3" (click)="isOnClick('maps')">Maps</a>
+                                                <span class="brdr"></span>
+
+                    <a class="nav-item nav-link-item mr-3 ml-3" (click)="isOnClick('contact')">Contact us</a>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid p-0 m-0">
+
+        <div style="width: 100%; height: 100%; min-height: 900px; position: relative; background: grey; margin-top: -50px; overflow: hidden;">
+            <video [autoplay]="true" [muted]="true" [loop]="true" id="myVideo">
+                <source src="https://captiva-test.plotkinruslan.com/assets/imgs/sea.mp4" type="video/mp4">
+            </video>
+
+            <div style="position:relative; height: 100%; min-height: 900px; display:flex; flex-direction:column; align-items: center; justify-content: center;">
+                <h1 class="title">
+                    Real estate <br>
+                    investments in Israel 
+                </h1>
+                <button>
+                    <span>
+                        READ MORE >>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+</div>
+
+
+
+
+<div class="container-fluid" style="background: #0C3C60; padding: 15px 0;">
+    
+
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="w-25">
+                <ul class="d-flex flex-column justify-content-around list" style="height: 100%;">
+                    <li><span>20 years of experience</span></li>
+                    <li><span>Close legal advice</span></li>
+                    <li><span>Proven return</span></li>
+                    <li><span>Efficient purchase process</span></li>
+                </ul>
+            </div>
+            <div class="w-75 mt-3">
+                <form class="d-flex flex-column">
+                    <p style="color: white; font-size: 19px;">For more details and scheduling a consulting meeting call +972 53 8312275 or leave us a message:</p>
+                    <div class="w-100 d-flex flex-row justify-content-between">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="firstName" placeholder="*First name">
+                        </div>
+        
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="lastName" placeholder="*Last name">
+                        </div>
+    
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="*Email address">
+                        </div>
+        
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="phone" placeholder="*Phone number">
+                        </div>
+                    </div>
+    
+                    <div class="w-100 d-flex flex-row justify-content-between">
+                        <div class="form-group w-75">
+                            <input type="text" class="form-control" id="firstName" placeholder="*Message">
+                        </div>
+        
+                        <button type="submit" class="submit w-25 ml-2">Send</button>
+                    </div>
+    
+    
+    
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

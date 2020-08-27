@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="wrapper mt-5 d-flex flex-row justify-content-around">
+
+                <div *ngFor="let itm of count; let i = index; let last = last" id="counter" class="d-flex flex-row">
+
+                    <div class="d-flex flex-column">
+                        <div class="d-flex flex-row">
+                            <h1 class="counter text-center w-100">{{itm.countTo}}{{itm.symbol}}</h1>
+                        </div>
+                        <p style="width: 100%; min-width: 100px; text-align: center; height: 100px;">{{itm.name}}</p>
+                    </div>
+                    
+                    <span class="bordered" *ngIf="!last"></span>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

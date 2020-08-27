@@ -1,0 +1,112 @@
+.logo-wrapper {
+  background: white;
+  position: relative;
+  width: 230px;
+  z-index: 5;
+  height: 200px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  z-index: 2;
+  top: -15px;
+}
+.logo-flag {
+  width: auto;
+  z-index: 3;
+  position: absolute;
+  top: 150px;
+}
+.brdr {
+  border-right: 2px solid #BE0000;
+  height: 20px;
+  position: relative;
+  top: 5px;
+}
+.nav-link-item {
+  font-size: 25px;
+  color: #0C3C60;
+}
+.nav-link-item:hover {
+  text-decoration: none;
+}
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    /* top: 50px;
+    position: relative; */
+}
+#myVideo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .list {
+    list-style-image: url('https://captiva-test.plotkinruslan.com/assets/imgs/icon-v.svg');
+  }
+  .list > li {
+    color: white;
+    font-size: 18px;
+  }
+  .list > li > span{
+    display:inline-block;
+    vertical-align:top;
+    margin-top:-10px;
+  }
+
+  button {
+    width: 199px;
+    height: 55px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    color: #C90000;
+    line-height: 90%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    /* top: 50px;
+    position: relative; */
+  }
+  .form-wrapper {
+    /* height: 200px; */
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+  }
+  .submit {
+      width: 150px;
+      height: 60px;
+      background: #2E8DFB;
+      color: white;
+      text-transform: uppercase;
+  }
+
+  input[type="text"], input[type="email"] {
+      height: 60px;
+      border-radius: 40px;
+  }
+
+  #navbarNavAlt {
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+  }
+.nav-link-item {
+  font-size: 20px;
+  font-weight: 400;
+}
