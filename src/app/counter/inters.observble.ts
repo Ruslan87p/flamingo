@@ -47,6 +47,7 @@ export class LazyLoadingImg {
                             // console.log(this.barChartData, 'dddddddddddddddddddddddddd');
                         }
 
+                        
 
                         else {
                           return
