@@ -72,7 +72,6 @@ export class ChartComponent implements AfterViewInit {
                
               }
 
-
                if (element.top > -300 || element.top < 400) {
                 this.labels.classList.add('labels-animation-add');
               }
