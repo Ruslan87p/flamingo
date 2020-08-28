@@ -1,17 +1,46 @@
 .bordered {
     width: 2px;
     height: 80px;
-    left: 30px;
-    top: 0;
     position: relative;
+    display: block;
+    left: 25px;
     background: darkblue;
 }
 h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-family: 'Catamaran', sans-serif;
     font-weight: 700;
 }
 p {
     color: #2E8DFB;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: center;
 }
+.symbol {
+    font-size: 3.5rem;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 700;
+    margin-top: -10px;
+    position: relative;
+    right: 20px;
+}
+#counter:nth-child(1) {
+    width: 200px;
+    /* background: black; */
+}
+#counter:nth-child(2) {
+    width: 350px;
+    /* background: black; */
+}
+#counter:nth-child(3) {
+    /* background: black; */
+    width: 200px;
+}
+#counter:nth-child(4) {
+    width: 200px;
+    /* background: black; */
+}
+/* .counter {
+    min-width: 200px;
+} */

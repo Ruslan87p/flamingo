@@ -1,9 +1,9 @@
 <div class="container">
-    <div style="margin-top: 50px;">
+    <div>
         <h1>Demand for new apartments</h1>
         <br>
     
-        <div class="w-100 text-center">
+        <div class="w-100 text-center" style="transform: translateY(-20px);">
             <span class="link" data-toggle="modal" data-target="#modalWin">
                 Data from the Israelibr  <br>
                 Central Bureau of Statistics >>
@@ -12,17 +12,31 @@
     
 
         <div class="chart-wrapper" id="chart-wrapper">
-            <canvas baseChart 
-                [datasets]="barChartData"
-                [labels]="barChartLabels"
-                [options]="barChartOptions"
-                [plugins]="barChartPlugins"
-                [legend]="barChartLegend"
-                [chartType]="barChartType">
-          </canvas>
+            <div class="labels">
+                <span style="top: 155px;">2018Q1</span>
+                <span style="top: 145px;">2018Q2</span>
+                <span style="top: 125px;">2018Q3</span>
+                <span style="top: 105px;">2018Q4</span>
+                <span style="top: 83px;">2019Q1</span>
+                <span style="top: 60px;">2019Q2</span>
+                <span style="top: 48px;">2019Q3</span>
+                <span style="top: 25px;">2019Q4</span>
+                <span style="top: 10px;">2020Q1</span>
+            </div>
+
+            <div class="chart-inner-wrapper" *ngIf="show">
+                <canvas baseChart 
+                        [datasets]="barChartData"
+                        [labels]="barChartLabels"
+                        [options]="barChartOptions"
+                        [plugins]="barChartPlugins"
+                        [legend]="barChartLegend"
+                        [chartType]="barChartType">
+                </canvas>        
+            </div>
+
         </div>
 
-          
     </div>
 </div>
 
@@ -42,7 +56,7 @@
                     <div class="wrapper">
 
                         <div class="w-50">
-                            <img style="max-width: 650px;" src="https://captiva-test.plotkinruslan.com/assets/imgs/map.png" alt="">
+                            <img class="map-img" src="https://captiva-test.plotkinruslan.com/assets/imgs/map.png" alt="">
                         </div>
 
                         <div class="w-50 d-flex flex-column align-items-end">

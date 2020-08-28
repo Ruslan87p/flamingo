@@ -7,6 +7,7 @@
 }
 h1 {
     text-transform: uppercase;
+    font-family: 'Catamaran', sans-serif;
     width: 100%;
     text-align: center;
     color: #C90000;
@@ -14,44 +15,50 @@ h1 {
 }
 h2 {
     width: 100%;
-    text-align: center;
+    text-align: left;
     color: #C90000;
     font-weight: 400;
     font-size: 2rem;
+    font-family: 'Catamaran', sans-serif;
 }
 .pup-text {
-    width: 100%;
     margin: 0 auto;
     max-width: 700px;
+    width: 100%;
+}
+.pup-text > a {
     text-align: left;
+    font-weight: 400;
     color: #0C3C60;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-family: 'Catamaran', sans-serif;
 }
 .link {
     text-transform: uppercase;
     color: #0C3C60;
-    font-weight: 400;
     font-size: 20px;
+    font-weight: 400;
+    font-family: 'Catamaran', sans-serif;
 }
 .title {
     text-transform: uppercase;
     font-weight: 400;
     text-align: right;
+    font-family: 'Catamaran', sans-serif;
     width: 100%;
     color: #C90000;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 .container-bg {
-    position: relative;
-    top: -50px;
-    height: 200px;
+    margin-top: -200px;
+    height: 400px;
     background: url('https://captiva-test.plotkinruslan.com/assets/imgs/mountains.png'), no-repeat;
     background-size: cover;
     background-position: top;
 }
 .content {
-    height: 500px;
+    height: 600px;
     background: #EFF8FF;
     position: relative;
     top: -100px;
@@ -67,23 +74,43 @@ h2 {
     height: 70%;
 }
 
+.chart-inner-wrapper {
+    width: 700px;
+    height: 500px;
+    transform: translateY(50px);
+}
+
 .chart-wrapper {
     max-width: 700px;
     margin: 0 auto;
-    height: 600px;
+    height: 500px;
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    opacity: 0;
-    position: relative;
-    top: 20px;
+    justify-content: space-around;
 }
-.wrapper-animation {
-    opacity: 1;
+
+.labels-animation-add {
+    opacity: 1 !important;
+    transform: translate(5px, -120px) !important;
+}
+.labels-animation-remove {
+    opacity: 0 !important;
+    transform: translate(5px, -100px) !important;
+}
+.labels {
+    position: absolute;
+    height: 200px;
+    opacity: 0;
+    transform: translate(5px, -100px);
+    transition: ease-in-out all 600ms;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Catamaran', sans-serif;
+}
+.labels > span {
+    padding: 0 11px;
+    text-align: center;
     position: relative;
-    top: 0;
-    transition: ease-in-out 1500ms all;
 }
 
 .modal-body {
@@ -94,4 +121,146 @@ h2 {
 .modal-content {
     height: 500px;
     display: flex;
+}
+
+
+.map-img {
+    max-width: 800px;
+    position: relative;
+    opacity: 1;
+    transition: linear 500ms;
+    animation: gravity 3s infinite alternate;
+}
+
+@keyframes gravity {
+    from { 
+        transform: translateY(10px);
+    }
+    to { 
+        transform: translateY(-10px); 
+    }
+  }
+
+
+
+.graph {
+    width: 60px;
+    background: #fcf4f4;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    padding-top: 20px;
+    align-items: flex-start;
+    justify-content: center;
+
+    animation-iteration-count: 1;
+    animation-duration: 0.3s;
+    animation-name: up;
+    /* animation-delay: 1s */
+}
+@keyframes up {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+  }
+.graph1 {
+    height: 310px; 
+}
+.graph2 {
+    height: 320px; 
+}
+.graph3 {
+    height: 340px; 
+}
+.graph4 {
+    height: 360px; 
+}
+.graph5 {
+    height: 380px; 
+}
+.graph6 {
+    height: 400px; 
+}
+.graph7 {
+    height: 410px; 
+}
+.graph8 {
+    height: 430px; 
+}
+.graph9 {
+    height: 450px; 
+}
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url('../../assets/imgs/point.png'), no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 20;
+}
+.line {
+    width: 100px;
+    height: 5px;
+    position: absolute;
+    background: #0c3c60;
+    z-index: 10;
+    /* animation-iteration-count: 1;
+    animation-duration: 0.3s;
+    animation-name: slidein; */
+    /* animation-delay: 1s */
+}
+@keyframes slidein {
+    from {
+        width: 0;
+    }
+  
+    to {
+        width: 100px;
+    }
+  }
+
+
+.line1 {
+    transform: rotate(-6deg);
+    top: 28px;
+    left: 30px;
+}
+.line2 {
+    transform: rotate(-11deg);
+    top: 25px;
+    left: 30px;
+}
+.line3 {
+    transform: rotate(-12deg);
+    top: 25px;
+    left: 30px;
+}
+.line4 {
+    transform: rotate(-12deg);
+    top: 25px;
+    left: 30px;
+}
+.line5 {
+    transform: rotate(-12deg);
+    top: 25px;
+    left: 30px;
+}
+.line6 {
+    transform: rotate(-6deg);
+    top: 28px;
+    left: 30px;
+}
+.line7 {
+    transform: rotate(-12deg);
+    top: 25px;
+    left: 30px;
+}
+.line8 {
+    transform: rotate(-12deg);
+    top: 25px;
+    left: 30px;
 }

@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { LazyLoadingImg } from '../../app/counter/inters.observble'
 import counterUp from 'counterup2'
 
@@ -42,26 +42,30 @@ export class CounterComponent implements AfterViewInit {
       symbol: "%"
     }
   ];
-
+  showCount = false;
 
   constructor() {
 
   }
 
+  @ViewChild('scroll', {static: false}) scroll: ElementRef;
 
+  @HostListener('window:scroll', []) onScrollEvent() {
 
+    if (window.scrollY > 350 && window.scrollY < 400) {   
+      console.log(window.scrollY);   
+      this.cnt.forEach( (item) => {
+        counterUp(item, {
+        duration: 2000,
+        delay: 16,
+        })
+      });
+    }
+    
+}
 
   ngAfterViewInit() {
-
-
-
         this.cnt = document.querySelectorAll('.counter');
-
-
-        this.counter = document.querySelector('#counter');
-        new LazyLoadingImg(this.counter, this.cnt);
-        
-
   }
 
 

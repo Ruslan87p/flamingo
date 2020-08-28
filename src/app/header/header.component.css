@@ -30,21 +30,22 @@
   top: 5px;
 }
 .nav-link-item {
-  font-size: 25px;
   color: #0C3C60;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Catamaran', sans-serif;
 }
 .nav-link-item:hover {
   text-decoration: none;
 }
 .title {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Catamaran', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
     color: white;
     text-align: center;
-    font-size: 4rem;
-    /* top: 50px;
-    position: relative; */
+    font-size: 3.7rem;
+    max-width: 680px;
 }
 #myVideo {
     object-fit: cover;
@@ -56,10 +57,13 @@
   }
   .list {
     list-style-image: url('https://captiva-test.plotkinruslan.com/assets/imgs/icon-v.svg');
+    margin-top: 10px;
   }
   .list > li {
     color: white;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 400;
   }
   .list > li > span{
     display:inline-block;
@@ -75,13 +79,11 @@
     outline: none;
     color: #C90000;
     line-height: 90%;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    /* top: 50px;
-    position: relative; */
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
   }
   .form-wrapper {
-    /* height: 200px; */
     height: auto;
     width: 100%;
 
@@ -94,19 +96,32 @@
       background: #2E8DFB;
       color: white;
       text-transform: uppercase;
+      font-family: 'Catamaran', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
   }
 
   input[type="text"], input[type="email"] {
       height: 60px;
+      width: 100%;
+      border: none;
       border-radius: 40px;
+      text-indent: 15px;
+      color: black;
   }
-
+  ::placeholder {
+    color: black;
+    font-weight: 400;
+  }
+.control {
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Catamaran', sans-serif;
+}
   #navbarNavAlt {
     align-items: center;
     justify-content: flex-end;
     padding: 0;
   }
-.nav-link-item {
-  font-size: 20px;
-  font-weight: 400;
-}
+

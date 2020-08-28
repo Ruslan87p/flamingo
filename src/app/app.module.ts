@@ -16,6 +16,7 @@ import { AnchorService } from './anchor.service';
 import { ChartsModule, ThemeService } from 'ng2-charts';
 import { Canva } from './chart/canvas';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,7 @@ import { Canva } from './chart/canvas';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartsModule,
+    ChartsModule
   ],
   providers: [AnchorService, ThemeService, Canva],
   bootstrap: [AppComponent]

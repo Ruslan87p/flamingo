@@ -1,6 +1,3 @@
-import counterUp from 'counterup2'
-import { Canva } from '../chart/canvas';
-
 
 export class LazyLoadingImg {
 
@@ -8,7 +5,7 @@ export class LazyLoadingImg {
     onDestroyEvent;
     observer;
 
-    constructor(anchor?, cnt?) {
+    constructor(anchor) {
         // On scroll reveal sections
         let options = {
             root: null,
@@ -17,21 +14,12 @@ export class LazyLoadingImg {
         };
         
         this.onSCrollShow = () => {
+
             // Observe on scroll and show element in the middle of the screen
             const onIntersection = (entries) => {
                 entries.forEach(entry => {
                 // Are we in viewport?
-                if (entry.intersectionRatio > 0 && entry.intersectionRatio < 0.3) {
-                        
-                        if (cnt) {
-                            cnt.forEach( (item) => {
-                                counterUp(item, {
-                                duration: 2000,
-                                delay: 16
-                                })
-                              });
-                        }
-
+                if (entry.intersectionRatio > 0) {
 
                         if (entry.target.classList.contains("bg-view")) {
                             entry.target.classList.add('bg-animation');
@@ -41,19 +29,11 @@ export class LazyLoadingImg {
                             entry.target.classList.add('service-wrapper-animation');
                         }
 
-
-                        if (entry.target.classList.contains("chart-wrapper")) {                            
-                            entry.target.classList.add('wrapper-animation');
-                            // console.log(this.barChartData, 'dddddddddddddddddddddddddd');
-                        }
-
-                        
-
-                        else {
-                          return
-                        }
-
                     }
+
+                    else {
+                        return
+                      }
                 this.observer.unobserve(entry.target);     
                 });
             }

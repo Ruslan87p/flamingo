@@ -10,32 +10,42 @@ export class Canva {
 
 
     barChartOptions: ChartOptions = {
-        maintainAspectRatio: true,
+          elements: {
+            line: {
+                tension: 0, // disables bezier curves
+            }
+        },
+        legend: {
+          position: 'top',
+          display: false
+        },
+        maintainAspectRatio: false,
         tooltips: {
             enabled: false
         },
         hover: {
-            // mode: null,
+            mode: null,
             "animationDuration": 0
         },
-        spanGaps: true,
+        // spanGaps: true,
         responsive: true,
-        legend: {
-          display: false
-      },
         scales: {
           xAxes: [{
+            stacked: false,
             ticks: {
               fontSize: 15,
               fontColor: 'black',
               fontStyle: 'bold',
+              display: false,
               beginAtZero: true,
+              padding: 0
             },
               gridLines: {
                 display:false,
                 drawBorder: false,
                 lineWidth: 0
-              }
+            },
+            position: 'top',
           }],
           yAxes: [{
               ticks: {
@@ -50,30 +60,29 @@ export class Canva {
           }]
       },
       animation: {
+        easing: "easeOutCubic",
         // duration: 1,
         onComplete: function () {
           let chartInstance = this.chart,
           ctx = chartInstance.ctx;
           ctx.font = Chart.helpers.fontString(
-            Chart.defaults.global.defaultFontSize = 15,
+            Chart.defaults.global.defaultFontSize = 17,
             Chart.defaults.global.defaultFontStyle = 'bold',
-            Chart.defaults.global.defaultFontFamily = 'Montserrat');
-          ctx.textAlign = 'center';
-          ctx.textBaseline = 'bottom';
-          ctx.fillStyle = '#8bc925';
+            Chart.defaults.global.defaultFontFamily = 'Catamaran');
+
          
           this.data.datasets.forEach(function (dataset) {
             if (dataset.stack === 'a') {
               let meta = chartInstance.controller.getDatasetMeta(1);
+              ctx.textAlign = 'center';
+              ctx.textBaseline = 'bottom';
+              ctx.fillStyle = '#8bc925';
+              
               meta.data.forEach(function (bar, index) {
                 let data = dataset.data[index];
-                // let dataL = ['2018Q1', '2018Q2', '2018Q3', '2018Q4', '2019Q1', '2019Q2', '2019Q3', '2019Q4', '2020Q1'][index];
-                // console.log(dataL);
-                ctx.fillText(data, bar._model.x, bar._model.y + 70);
-                // ctx.fillText(dataL, bar._model.x, bar._model.y - 10);
+                ctx.fillText(data, bar._model.x, bar._model.y + 60);
               });
             }
-    
           });
         },
       },
@@ -85,18 +94,30 @@ export class Canva {
     
       barChartData: ChartDataSets[] = [
         {
-          data: [2750, 2850, 3050, 3250, 3450, 3650, 3750, 3950, 4100], label: '', type: 'line',
-          borderColor: '#0c3c60',
+          data: [2800, 2900, 3100, 3300, 3500, 3700, 3800, 4000, 4150], label: '', type: 'line',
+          borderColor: '#0c3c60', // line
           backgroundColor: '#fcf4f4',
           fill: false,
           pointBackgroundColor: 'white',
-          pointBorderColor: '#0c3c60',
-          pointHoverBackgroundColor: 'white',
-          pointHoverBorderColor: '#0c3c60',
-          pointRadius: 15,
+          pointBorderColor: 'white',
+          pointBorderWidth: 4,
+          // pointHoverBackgroundColor: '#0c3c60',
+          // pointHoverBorderColor: 'purple',
+          pointRadius: 6,
           hitRadius: 1,
           hoverRadius: 20,
           borderWidth: 3,
+          pointHoverBorderWidth: 3,
+        },
+        {
+          data: [2800, 2900, 3100, 3300, 3500, 3700, 3800, 4000, 4150], label: '', type: 'line',
+          // borderColor: 'red',
+          // backgroundColor: 'red',
+          fill: false,
+          pointBackgroundColor: '#0c3c60',
+          pointBorderColor: 'white',
+          pointRadius: 20,
+          borderWidth: 5,
           pointHoverBorderWidth: 3,
         },
         {

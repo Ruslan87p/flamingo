@@ -1,15 +1,17 @@
 .title {
     color: #C90000;
     text-transform: uppercase;
-    font-weight: 300;
     text-align: center;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 400;
 }
 .wrapper {
     width: 100%;
 }
 p {
     color: #0C3C60;
-    font-size: 20px;
+    font-size: 22px;
     width: 80%;
     text-align: center;
+    font-family: 'Catamaran', sans-serif;
 }

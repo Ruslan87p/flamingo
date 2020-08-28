@@ -28,7 +28,7 @@ export class IconsAboutCompanyComponent implements AfterViewInit {
     },
     {
       img: "https://captiva-test.plotkinruslan.com/assets/imgs/icon4.png",
-      name: "Location",
+      name: "Locations",
       description: "All across Israel"
     }
   ];

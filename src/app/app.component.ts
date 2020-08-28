@@ -1,6 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { AnchorService } from './anchor.service';
-import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-root',

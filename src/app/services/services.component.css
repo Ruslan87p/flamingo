@@ -15,14 +15,17 @@
 h1 {
     color: #C90000;
     text-transform: uppercase;
-    font-weight: 300;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 500;
     text-align: center;
 }
+
 .title {
     font-size: 20px;
     color: #0C3C60;
     text-transform: uppercase;
-    font-weight: 300;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 400;
     text-align: center;
     position: relative;
     top: 20px;
@@ -44,8 +47,8 @@ p {
 
 /* CARD */
 .scene {
-    width: 200px;
-    height: 260px;
+    width: 250px;
+    height: 250px;
     perspective: 600px;
     background: white;
   }

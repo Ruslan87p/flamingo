@@ -11,7 +11,7 @@
     margin-top: -20px;
 }
 .title {
-    font-size: 1.7rem;
+    font-size: 32px;
     margin-top: 20px;
     font-family: 'Catamaran', sans-serif;
     font-weight: 700;
@@ -19,7 +19,8 @@
 }
 .text {
     color: #0C3C60;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'Catamaran', sans-serif;
 }
 .service-img {
     width: 100%;
