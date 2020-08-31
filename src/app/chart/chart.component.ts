@@ -49,13 +49,11 @@ export class ChartComponent implements AfterViewInit {
   ngAfterViewInit() {
 
     this.labels = this.graph.nativeElement.children[0].children[0].children[3].children[0];
-    this.imgMap = this.graph.nativeElement.children[1].children[0].children[0].children[1].children[0].children[0].children[0].children[0];
+    // this.imgMap = this.graph.nativeElement.children[1].children[0].children[0].children[1].children[0].children[0].children[0].children[0];
 
     this.onSCrollShow = () => {
       // Observe on scroll and show element in the middle of the screen
-
       const element = this.graph.nativeElement.getBoundingClientRect();
-      console.log(element.top);
 
       const onIntersection = (entries) => {
           entries.forEach(entry => {

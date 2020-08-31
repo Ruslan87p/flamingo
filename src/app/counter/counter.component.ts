@@ -35,11 +35,11 @@ export class CounterComponent implements AfterViewInit {
       symbol: "+"
     },
     {
-      countTo: '100',
+      countTo: '900',
       from: 0,
       duration: 5,
       name: "Satisfied customers",
-      symbol: "%"
+      symbol: "+"
     }
   ];
   showCount = false;
@@ -53,7 +53,6 @@ export class CounterComponent implements AfterViewInit {
   @HostListener('window:scroll', []) onScrollEvent() {
 
     if (window.scrollY > 350 && window.scrollY < 400) {   
-      console.log(window.scrollY);   
       this.cnt.forEach( (item) => {
         counterUp(item, {
         duration: 2000,

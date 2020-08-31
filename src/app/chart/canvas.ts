@@ -7,6 +7,7 @@ export class Canva {
   barChartType: ChartType = 'bar';
   barChartLegend = false;
   barChartPlugins = [];
+  draw;
 
 
     barChartOptions: ChartOptions = {
@@ -60,6 +61,22 @@ export class Canva {
           }]
       },
       animation: {
+        onProgress: function () {
+          let chartInstance = this.chart,
+          ctx = chartInstance.ctx;
+
+          let originalStroke = ctx.stroke;
+          ctx.stroke = function () {
+            ctx.save();
+            ctx.shadowColor = '#333333';
+            ctx.shadowBlur = 2;
+            ctx.shadowOffsetX = 1;
+            ctx.shadowOffsetY = 1;
+            originalStroke.apply(this)
+            ctx.restore();
+          }
+
+        },
         easing: "easeOutCubic",
         // duration: 1,
         onComplete: function () {
@@ -100,7 +117,7 @@ export class Canva {
           fill: false,
           pointBackgroundColor: 'white',
           pointBorderColor: 'white',
-          pointBorderWidth: 4,
+          pointBorderWidth: 2,
           // pointHoverBackgroundColor: '#0c3c60',
           // pointHoverBorderColor: 'purple',
           pointRadius: 6,
@@ -116,8 +133,9 @@ export class Canva {
           fill: false,
           pointBackgroundColor: '#0c3c60',
           pointBorderColor: 'white',
-          pointRadius: 20,
-          borderWidth: 5,
+          pointRadius: 17,
+          pointBorderWidth: 6,
+          borderWidth: 3,
           pointHoverBorderWidth: 3,
         },
         {
